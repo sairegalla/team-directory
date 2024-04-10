@@ -1,0 +1,114 @@
+.body {
+  background-color: rgb(250, 250, 250);
+}
+
+.container {
+  display: grid;
+  grid-gap: 48px;
+  min-width: 300px;
+  max-width: 88%;
+  padding: 48px;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "role-title"
+    "profile";
+}
+
+@media screen and (min-width: 641px) and (max-width: 1280px) {
+  .container {
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "role-title role-title"
+      "profile profile";
+    padding-right: 45px;
+  }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1600px) {
+  .container {
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas:
+      "role-title role-title role-title"
+      "profile profile profile";
+    padding-right: 45px;
+  }
+}
+
+@media screen and (min-width: 1601px) {
+  .container {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:
+      "role-title role-title role-title role-title"
+      "profile profile profile profile";
+    padding-right: 45px;
+  }
+}
+
+.role-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 28px;
+  margin-bottom: -14px;
+  grid-area: role-title;
+  color: rgb(109, 107, 107);
+}
+
+.smallCardContainer {
+  grid-area: profile;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  gap: 12px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.smallCardContainer:hover {
+  cursor: pointer;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 2px;
+  width: 56px;
+  height: 56px;
+  padding: 12px;
+  margin: auto 0px auto 0px;
+}
+
+.image {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  border-radius: 16px;
+  margin-top: 10px;
+}
+
+.titleDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  row-gap: 2px;
+  overflow: hidden;
+}
+
+.name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(56, 55, 55);
+}
+
+.email {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  color: gray;
+}

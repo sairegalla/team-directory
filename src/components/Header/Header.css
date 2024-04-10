@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #76b7ec;
+  color: white;
+  height: 56px;
+}
+
+.app-name {
+  font-family: "Poppins", sans-serif;
+  margin-right: auto;
+  padding-left: 38px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  width: 300px;
+  height: 30px;
+}
