@@ -13,7 +13,11 @@ export const ListProvider = ({ children }) => {
 
   useEffect(() => {
     const filtered = membersList.filter((data) => {
-      return data.first_name.toLowerCase().includes(searchText.toLowerCase());
+      return (
+        data.first_name.toLowerCase().includes(searchText.toLowerCase()) ||
+        data.last_name.toLowerCase().includes(searchText.toLowerCase()) ||
+        data.email.toLowerCase().includes(searchText.toLowerCase())
+      );
     });
 
     setFilteredList(filtered);
